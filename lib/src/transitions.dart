@@ -1,0 +1,15 @@
+enum PageTransitions {
+  fade,
+  fadeIn,
+  rightToLeft,
+  leftToRight,
+  upToDown,
+  downToUp,
+  rightToLeftWithFade,
+  leftToRightWithFade,
+  zoom,
+  noTransition,
+  cupertino,
+  size,
+  circularReveal,
+}
