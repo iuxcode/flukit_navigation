@@ -9,11 +9,11 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  flukit_core:
+    git: https://github.com/iuxcode/flukit_core.git
   flutter:
     sdk: flutter
   go_router: ^13.2.0
-  flukit_core:
-    path: ../flukit_core
 
 dev_dependencies:
   flutter_test:
