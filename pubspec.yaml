@@ -1,7 +1,7 @@
 name: flukit_navigation
-description: "A new Flutter package project."
+description: Flukit Router is a feature-packed routing and navigation package for Flutter applications, offering intuitive APIs and powerful navigation management capabilities.
 version: 0.0.1
-homepage: Flukit Router is a feature-packed routing and navigation package for Flutter applications, offering intuitive APIs and powerful navigation management capabilities.
+homepage: https://github.com/iuxcode/flukit_navigation
 publish_to: none
 
 environment:
