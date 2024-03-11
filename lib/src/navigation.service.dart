@@ -7,7 +7,7 @@ import 'page.dart';
 import 'transitions_builders/defaults.dart';
 
 class NavigationService {
-  final Flu fluInstance;
+  final Flukit fluInstance;
 
   NavigationService(this.fluInstance);
 

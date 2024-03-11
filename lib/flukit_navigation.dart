@@ -9,4 +9,4 @@ export './src/page.dart';
 export './src/observers.dart';
 export './src/transitions.dart';
 
-final NavigationService navigationService = NavigationService(Flu());
+final NavigationService navigationService = NavigationService(Flu);
