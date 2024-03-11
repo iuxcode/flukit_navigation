@@ -13,9 +13,11 @@ class FluPage {
     this.transition = PageTransitions.rightToLeft,
   });
 
-  CustomTransitionPage buildRouteAnimation(
-          GoRouterState state, Widget content) =>
-      CustomTransitionPage(
+  CustomTransitionPage<dynamic> buildRouteAnimation(
+    GoRouterState state,
+    Widget content,
+  ) =>
+      CustomTransitionPage<dynamic>(
         key: state.pageKey,
         child: content,
         transitionsBuilder:
