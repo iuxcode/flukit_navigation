@@ -1,27 +1,36 @@
 import 'package:flukit_core/flukit_core.dart';
+import 'package:flukit_navigation/src/observers.dart';
+import 'package:flukit_navigation/src/page.dart';
 import 'package:flukit_navigation/src/transitions.dart';
+import 'package:flukit_navigation/src/transitions_builders/defaults.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 
-import 'page.dart';
-import 'transitions_builders/defaults.dart';
-
+/// Provide navigation utilities such as [GoRouter] and [FluNavObserver]
 class NavigationService {
-  final Flukit fluInstance;
-
+  /// Navigation service constructor
   NavigationService(this.fluInstance);
 
+  /// [Flukit] instance
+  final Flukit fluInstance;
+
+  /// Build routes based on the provided list of pages
+  /// and return a GoRouter instance.
   GoRouter buildRoutes(List<FluPage> pages) => GoRouter(
         routes: pages
-            .map((page) => GoRoute(
-                  path: page.name.startsWith("/") ? page.name : "/${page.name}",
-                  pageBuilder: (context, state) {
-                    return page.buildRouteAnimation(state, page.content);
-                  },
-                ))
+            .map(
+              (page) => GoRoute(
+                path: page.name.startsWith('/') ? page.name : '/${page.name}',
+                pageBuilder: (context, state) {
+                  return page.buildRouteAnimation(state, page.content);
+                },
+              ),
+            )
             .toList(),
       );
 
+  /// Generates the appropriate page transition based
+  /// on the given [PageTransitions] type.
   Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)
       buildPageTransitions(PageTransitions transition, Widget page) {
     switch (transition) {

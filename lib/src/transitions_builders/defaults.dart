@@ -1,7 +1,8 @@
+// ignore_for_file: public_member_api_docs
+
+import 'package:flukit_navigation/src/transitions_builders/circular_reveal_clipper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'circular_reveal_clipper.dart';
 
 class LeftToRightFadeTransition {
   Widget buildTransitions(
