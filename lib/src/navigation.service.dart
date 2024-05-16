@@ -20,6 +20,7 @@ class NavigationService {
         routes: pages
             .map(
               (page) => GoRoute(
+                name: page.name,
                 path: page.name.startsWith('/') ? page.name : '/${page.name}',
                 pageBuilder: (context, state) {
                   return page.buildRouteAnimation(state, page.content);
