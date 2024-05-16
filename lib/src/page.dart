@@ -8,6 +8,7 @@ class FluPage {
   FluPage({
     required this.name,
     required this.content,
+    this.isInitial = false,
     this.transition = PageTransitions.rightToLeft,
   });
 
@@ -22,6 +23,9 @@ class FluPage {
   /// Defaults to [PageTransitions.rightToLeft]
   /// See [PageTransitions] for more information
   final PageTransitions transition;
+
+  /// Either [true] if the page is the initial page
+  final bool isInitial;
 
   /// Generates a custom transition page for the given state and content widget.
   /// Returns a [CustomTransitionPage].
