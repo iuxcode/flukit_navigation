@@ -24,7 +24,7 @@ class FluPage {
   /// See [PageTransitions] for more information
   final PageTransitions transition;
 
-  /// Either [true] if the page is the initial page
+  /// Either true if the page is the initial page
   final bool isInitial;
 
   /// Generates a custom transition page for the given state and content widget.
