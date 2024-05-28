@@ -13,7 +13,7 @@ class FluPage {
   });
 
   /// The [Widget] content of the page
-  final Widget content;
+  final Widget Function(BuildContext, GoRouterState) content;
 
   /// The name of the page
   /// The path of the page will be `/` + [name]
