@@ -11,6 +11,7 @@ class FluPage {
     this.isInitial = false,
     this.transition = PageTransitions.rightToLeft,
     this.transitionDuration = const Duration(milliseconds: 300),
+    this.reverseTransitionDuration,
   });
 
   /// The [Widget] content of the page
@@ -28,8 +29,11 @@ class FluPage {
   /// Either true if the page is the initial page
   final bool isInitial;
 
-  /// Animation duration
+  /// Animation transition duration
   final Duration transitionDuration;
+
+  /// Animation reverse transition duration
+  final Duration? reverseTransitionDuration;
 
   /// Generates a custom transition page for the given state and content widget.
   /// Returns a [CustomTransitionPage].
@@ -41,6 +45,8 @@ class FluPage {
         key: state.pageKey,
         child: content,
         transitionDuration: transitionDuration,
+        reverseTransitionDuration:
+            reverseTransitionDuration ?? transitionDuration,
         transitionsBuilder:
             navigationService.buildPageTransitions(transition, content),
       );
