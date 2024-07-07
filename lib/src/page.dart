@@ -10,6 +10,7 @@ class FluPage {
     required this.content,
     this.isInitial = false,
     this.transition = PageTransitions.rightToLeft,
+    this.transitionDuration = const Duration(milliseconds: 300),
   });
 
   /// The [Widget] content of the page
@@ -27,6 +28,9 @@ class FluPage {
   /// Either true if the page is the initial page
   final bool isInitial;
 
+  /// Animation duration
+  final Duration transitionDuration;
+
   /// Generates a custom transition page for the given state and content widget.
   /// Returns a [CustomTransitionPage].
   CustomTransitionPage<dynamic> buildRouteAnimation(
@@ -36,6 +40,7 @@ class FluPage {
       CustomTransitionPage<dynamic>(
         key: state.pageKey,
         child: content,
+        transitionDuration: transitionDuration,
         transitionsBuilder:
             navigationService.buildPageTransitions(transition, content),
       );
