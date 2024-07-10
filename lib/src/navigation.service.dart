@@ -16,7 +16,12 @@ class NavigationService {
 
   /// Build routes based on the provided list of pages
   /// and return a GoRouter instance.
-  GoRouter buildRoutes(List<FluPage> pages) => GoRouter(
+  GoRouter buildRoutes(
+    List<FluPage> pages, {
+    List<NavigatorObserver>? observers,
+  }) =>
+      GoRouter(
+        observers: observers,
         routes: pages
             .map(
               (page) => GoRoute(
