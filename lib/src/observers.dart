@@ -20,6 +20,7 @@ class FluNavObserver extends NavigatorObserver {
     NavigationTypes type,
   )? onNavigationChanged;
 
+  /// Log routing changes
   void _log(String message) {
     if (log) {
       dev.log(message);
