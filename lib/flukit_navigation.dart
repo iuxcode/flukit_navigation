@@ -10,6 +10,9 @@ export 'package:go_router/go_router.dart';
 export './src/observers.dart';
 export './src/page.dart';
 export './src/transitions.dart';
+export './src/transitions_builders/circular_reveal_clipper.dart';
+export './src/transitions_builders/custom_transition.dart';
+export './src/transitions_builders/defaults.dart';
 
 /// Provide navigation utilities such as [GoRouter] and [NavigatorObserver]
 extension FlukitRouter on Flukit {
