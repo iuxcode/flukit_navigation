@@ -1,5 +1,4 @@
 import 'package:flukit_navigation/flukit_navigation.dart';
-import 'package:flukit_navigation/src/transitions_builders/defaults.dart';
 import 'package:flutter/cupertino.dart';
 
 /// A class that represents a page in the app

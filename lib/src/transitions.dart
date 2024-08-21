@@ -1,6 +1,5 @@
 import 'package:flukit_navigation/flukit_navigation.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 /// Available page transitions
 enum PageTransitions {
