@@ -1,4 +1,3 @@
-import 'package:flukit_core/flukit_core.dart';
 import 'package:flukit_navigation/src/observers.dart';
 import 'package:flukit_navigation/src/page.dart';
 import 'package:flukit_navigation/src/transitions.dart';
@@ -8,12 +7,6 @@ import 'package:go_router/go_router.dart';
 
 /// Provide navigation utilities such as [GoRouter] and [FluNavObserver]
 class NavigationService {
-  /// Navigation service constructor
-  NavigationService(this.fluInstance);
-
-  /// [Flukit] instance
-  final Flukit fluInstance;
-
   /// Build routes based on the provided list of pages
   /// and return a GoRouter instance.
   GoRouter buildRoutes(List<FluPage> pages) => GoRouter(

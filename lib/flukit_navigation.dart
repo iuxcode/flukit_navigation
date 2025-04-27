@@ -11,5 +11,9 @@ export './src/observers.dart';
 export './src/page.dart';
 export './src/transitions.dart';
 
-/// Provide navigation utilities such as [GoRouter] and [FluNavObserver]
-final NavigationService navigationService = NavigationService(Flu);
+final NavigationService _navigationService = NavigationService();
+
+extension FlukitNavigation on Flukit {
+  /// Provide navigation utilities such as [GoRouter] and [FluNavObserver]
+  NavigationService get router => _navigationService;
+}

@@ -1,3 +1,4 @@
+import 'package:flukit_core/flukit_core.dart';
 import 'package:flukit_navigation/flukit_navigation.dart';
 import 'package:flutter/material.dart';
 
@@ -33,6 +34,6 @@ class FluPage {
         key: state.pageKey,
         child: content,
         transitionsBuilder:
-            navigationService.buildPageTransitions(transition, content),
+            Flu.router.buildPageTransitions(transition, content),
       );
 }
